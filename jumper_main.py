@@ -37,7 +37,7 @@ def list_pagerduty_users(api_key):
 	payload = json.dumps(payload)
 
 	#call lambda forwarder
-	lambda_client = boto3.client('lambda', aws_access_key_id=goss_key, aws_secret_access_key=goss_secret, region='us-east-1')
+	lambda_client = boto3.client('lambda', aws_access_key_id=goss_key, aws_secret_access_key=goss_secret)
 	response = lambda_client.invoke(FunctionName='InfraSRE-HttpForwarder',InvocationType='RequestResponse',Payload=payload)
 
 
