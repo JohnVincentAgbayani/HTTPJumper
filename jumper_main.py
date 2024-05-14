@@ -50,4 +50,6 @@ def list_pagerduty_users(api_key):
 	for item in response_main['body']:
 		print(item)
 
+	print(response_main['body']['json'])
+
 list_pagerduty_users(pagerduty_key)
