@@ -1,7 +1,7 @@
 import boto3
 import json
 
-pagerduty_file = open("pagerduty_key.txt")
+pagerduty_file = open("pd_key.txt")
 pagerduty_key = pagerduty_file.read()
 pagerduty_key = pagerduty_key.replace("\n","").strip()
 
